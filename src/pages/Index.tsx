@@ -9,14 +9,14 @@ const Index = () => {
       <Navbar />
       
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Updated hero background image */}
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1549395156-e0c1fe6fc7a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center" />
-        <div className="absolute inset-0 bg-black/40" />
+        {/* Updated hero background image - artisanal ice cream display */}
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1579954115545-a95591f28bfc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-black/30" />
         
         <div className="absolute inset-0">
           <div className="absolute top-1/3 left-1/3 animate-float">
             <div className="relative">
-              <img src="https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
+              <img src="https://images.unsplash.com/photo-1576506295286-5cda18df43e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
                    alt="ZeroBite ice cream cup" 
                    className="w-32 h-32 rounded-full object-cover shadow-xl" />
               <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-cream-100/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-semibold shadow-sm">
@@ -26,7 +26,7 @@ const Index = () => {
           </div>
           <div className="absolute bottom-1/3 right-1/3 animate-float-delayed">
             <div className="relative">
-              <img src="https://images.unsplash.com/photo-1514849302-984523450cf4?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
+              <img src="https://images.unsplash.com/photo-1538489949601-cbabf5b0c105?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
                    alt="ZeroBite cone" 
                    className="w-28 h-28 rounded-full object-cover shadow-xl" />
               <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-cream-100/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-semibold shadow-sm">
