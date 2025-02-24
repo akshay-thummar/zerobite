@@ -8,7 +8,7 @@ const Index = () => {
       <Navbar />
       
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1501443762994-82bd5dace89a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-black/20" />
         
         <div className="absolute inset-0">
@@ -38,8 +38,11 @@ const Index = () => {
           <h1 className="font-playfair text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-6 animate-fade-up">
             Welcome to ZeroBite
           </h1>
-          <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto mb-8 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-            Indulge in guilt-free moments of pure bliss with our artisanal ice creams.
+          <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto mb-4 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+            Every Bite, Pure Delight
+          </p>
+          <p className="text-md sm:text-lg text-white/80 max-w-2xl mx-auto mb-8 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+            Zero worries, Zero sugar, Infinite delight
           </p>
           <a
             href="#flavors"
@@ -51,7 +54,29 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-cream-100">
+      <section className="py-12 bg-cream-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex flex-col items-center text-center p-6 rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
+              <Star className="w-12 h-12 text-yellow-400 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Zero Sugar</h3>
+              <p className="text-gray-600">Guilt-free indulgence with natural sweeteners</p>
+            </div>
+            <div className="flex flex-col items-center text-center p-6 rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
+              <Award className="w-12 h-12 text-blue-400 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Zero Compromise</h3>
+              <p className="text-gray-600">Premium taste without the guilt</p>
+            </div>
+            <div className="flex flex-col items-center text-center p-6 rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
+              <Clock className="w-12 h-12 text-green-400 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Zero Artificial</h3>
+              <p className="text-gray-600">100% natural ingredients, always fresh</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-cream-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-playfair text-4xl font-bold text-gray-900 mb-4">
@@ -77,14 +102,14 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section id="flavors" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-playfair text-4xl font-bold text-gray-900 mb-4">
               Featured Flavors
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Each flavor is carefully crafted using only the finest ingredients, creating an unforgettable taste experience.
+              Discover our innovative zero-sugar creations that deliver pure joy in every scoop. Made with natural sweeteners and premium ingredients.
             </p>
           </div>
           
@@ -125,10 +150,10 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-playfair text-4xl font-bold text-gray-900 mb-6">
-                Crafted with Care
+                Crafted with Care, Zero Compromises
               </h2>
               <p className="text-gray-600 mb-8">
-                Our ice cream is made in small batches using traditional methods and the finest ingredients. We believe in taking our time to create something truly special.
+                At ZeroBite, we believe in delivering pure joy without the guilt. Our innovative process ensures every scoop is perfect, using only natural ingredients and zero artificial additives.
               </p>
               <div className="space-y-6">
                 {process.map((step, index) => (
@@ -155,27 +180,6 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-cream-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-playfair text-4xl font-bold text-gray-900 mb-4">
-              #XbiteMoments
-            </h2>
-            <p className="text-gray-600">Share your Xbite experience with us on Instagram</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {instagramFeed.map((post, index) => (
-              <a key={index} href="#" className="relative aspect-square overflow-hidden rounded-lg group">
-                <img src={post.image} alt="Instagram post" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <p className="text-white text-sm">{post.likes} likes</p>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section id="contact" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -183,7 +187,7 @@ const Index = () => {
               Get in Touch
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Have a question or suggestion? We'd love to hear from you.
+              Have questions about our zero-sugar ice creams or want to share your ZeroBite experience? We'd love to hear from you.
             </p>
           </div>
           
@@ -238,13 +242,13 @@ const Index = () => {
 const flavors = [
   {
     name: "Classic Vanilla Bean",
-    description: "Madagascar vanilla beans infused in our signature cream base.",
+    description: "Madagascar vanilla beans infused in our zero-sugar cream base.",
     image: "https://images.unsplash.com/photo-1570197788417-0e82375c9371?ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80",
     allergens: ["Milk"],
   },
   {
     name: "Belgian Dark Chocolate",
-    description: "Rich Belgian chocolate blended to perfection.",
+    description: "Rich Belgian chocolate blended to perfection, naturally sweetened.",
     image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80",
     allergens: ["Milk", "Soy"],
   },
