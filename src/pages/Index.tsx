@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import { IceCream, Star, Award, Clock } from 'lucide-react';
@@ -8,26 +9,27 @@ const Index = () => {
       <Navbar />
       
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center" />
-        <div className="absolute inset-0 bg-black/20" />
+        {/* Updated hero background image */}
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1549395156-e0c1fe6fc7a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-black/40" />
         
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 animate-float">
+          <div className="absolute top-1/3 left-1/3 animate-float">
             <div className="relative">
-              <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
+              <img src="https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
                    alt="ZeroBite ice cream cup" 
-                   className="w-24 h-24 rounded-full object-cover shadow-lg" />
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-cream-100 px-3 py-1 rounded-full text-xs font-semibold shadow-sm">
+                   className="w-32 h-32 rounded-full object-cover shadow-xl" />
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-cream-100/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-semibold shadow-sm">
                 ZeroBite
               </div>
             </div>
           </div>
-          <div className="absolute bottom-1/4 right-1/4 animate-float-delayed">
+          <div className="absolute bottom-1/3 right-1/3 animate-float-delayed">
             <div className="relative">
-              <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
+              <img src="https://images.unsplash.com/photo-1514849302-984523450cf4?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
                    alt="ZeroBite cone" 
-                   className="w-20 h-20 rounded-full object-cover shadow-lg" />
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-cream-100 px-3 py-1 rounded-full text-xs font-semibold shadow-sm">
+                   className="w-28 h-28 rounded-full object-cover shadow-xl" />
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-cream-100/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-semibold shadow-sm">
                 ZeroBite
               </div>
             </div>
@@ -35,18 +37,18 @@ const Index = () => {
         </div>
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="font-playfair text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-6 animate-fade-up">
+          <h1 className="font-playfair text-5xl sm:text-7xl md:text-8xl font-bold text-white mb-8 animate-fade-up tracking-tight">
             Welcome to ZeroBite
           </h1>
-          <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto mb-4 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+          <p className="font-playfair text-xl sm:text-2xl text-white/90 max-w-2xl mx-auto mb-4 animate-fade-up italic" style={{ animationDelay: '0.2s' }}>
             Every Bite, Pure Delight
           </p>
-          <p className="text-md sm:text-lg text-white/80 max-w-2xl mx-auto mb-8 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+          <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10 animate-fade-up font-light" style={{ animationDelay: '0.3s' }}>
             Zero worries, Zero sugar, Infinite delight
           </p>
           <a
             href="#flavors"
-            className="inline-block bg-white text-gray-900 px-8 py-3 rounded-full font-medium transition-all hover:bg-cream-100 hover:scale-105 animate-fade-up"
+            className="inline-block bg-white/95 backdrop-blur-sm text-gray-900 px-8 py-4 rounded-full text-lg font-medium transition-all hover:bg-white hover:scale-105 animate-fade-up shadow-lg"
             style={{ animationDelay: '0.4s' }}
           >
             Explore Our Flavors
