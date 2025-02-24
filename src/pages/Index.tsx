@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import { IceCream, Star, Award, Clock } from 'lucide-react';
@@ -14,33 +13,43 @@ const Index = () => {
         <div className="absolute inset-0 bg-black/30" />
         
         <div className="absolute inset-0">
-          <div className="absolute top-1/3 left-1/3 animate-float">
-            <div className="relative">
+          <div className="absolute top-1/2 left-1/4 animate-float">
+            <div className="relative transform hover:scale-105 transition-transform duration-300">
               <img src="https://images.unsplash.com/photo-1576506295286-5cda18df43e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
                    alt="ZeroBite ice cream cup" 
-                   className="w-32 h-32 rounded-full object-cover shadow-xl" />
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-cream-100/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-semibold shadow-sm">
-                ZeroBite
+                   className="w-20 h-70 rounded-full object-cover shadow-2xl ring-4 ring-white/20" />
+              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-cream-100/90 backdrop-blur-sm px-6 py-1 rounded-full text-base font-semibold shadow-lg">
+                Choco  
               </div>
             </div>
           </div>
-          <div className="absolute bottom-1/3 right-1/3 animate-float-delayed">
-            <div className="relative">
+          {/* <div className="absolute bottom-1/4 right-1/4 animate-float-delayed">
+            <div className="relative transform hover:scale-105 transition-transform duration-300">
               <img src="https://images.unsplash.com/photo-1538489949601-cbabf5b0c105?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
                    alt="ZeroBite cone" 
-                   className="w-28 h-28 rounded-full object-cover shadow-xl" />
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-cream-100/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-semibold shadow-sm">
+                   className="w-36 h-36 rounded-full object-cover shadow-2xl ring-4 ring-white/20" />
+              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-cream-100/90 backdrop-blur-sm px-6 py-2 rounded-full text-base font-semibold shadow-lg">
                 ZeroBite
+              </div>
+            </div>
+          </div> */}
+          <div className="absolute top-1/3 right-[7%] animate-float" style={{ animationDelay: '0.4s' }}>
+            <div className="relative transform hover:scale-105 transition-transform duration-300">
+              <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
+                   alt="ZeroBite strawberry" 
+                   className="w-32 h-32 rounded-full object-cover shadow-2xl ring-4 ring-white/20" />
+              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-cream-100/90 backdrop-blur-sm px-6 py-2 rounded-full text-base font-semibold shadow-lg">
+                Strawberry
               </div>
             </div>
           </div>
         </div>
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="font-playfair text-5xl sm:text-7xl md:text-8xl font-bold text-white mb-8 animate-fade-up tracking-tight">
+          <h1 className="font-playfair text-5xl sm:text-7xl md:text-8xl font-bold text-white mb-8 animate-fade-up tracking-tight bg-gradient-to-r from-white to-cream-100 bg-clip-text text-transparent">
             Welcome to ZeroBite
           </h1>
-          <p className="font-playfair text-xl sm:text-2xl text-white/90 max-w-2xl mx-auto mb-4 animate-fade-up italic" style={{ animationDelay: '0.2s' }}>
+          <p className="font-playfair text-xl sm:text-2xl text-white/90 max-w-2xl mx-auto mb-4 animate-fade-up italic" style={{ animationDelay: '0.2s', textShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
             Every Bite, Pure Delight
           </p>
           <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10 animate-fade-up font-light" style={{ animationDelay: '0.3s' }}>
@@ -177,6 +186,57 @@ const Index = () => {
                 alt="Ice cream making process"
                 className="absolute inset-0 h-full w-full object-cover"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="locations" className="py-20 bg-cream-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-playfair text-4xl font-bold text-gray-900 mb-4">
+              Our Locations
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Visit us at our stores across Ahmedabad to experience the delightful world of zero-sugar ice cream.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Navrangpura</h3>
+              <p className="text-gray-600 mb-4">
+                12, Ground Floor, Sakar Complex<br />
+                Near Gujarat College<br />
+                Navrangpura, Ahmedabad - 380009
+              </p>
+              <div className="flex items-center text-sm text-gray-500">
+                <span>Open Daily: 10 AM - 12 PM</span>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Vastrapur</h3>
+              <p className="text-gray-600 mb-4">
+                5, Safal Pegasus<br />
+                100 Ft Road, Near Vastrapur Lake<br />
+                Vastrapur, Ahmedabad - 380015
+              </p>
+              <div className="flex items-center text-sm text-gray-500">
+                <span>Open Daily: 10 AM - 12 PM</span>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Prahladnagar</h3>
+              <p className="text-gray-600 mb-4">
+                3, Ground Floor, Mondeal Square<br />
+                SG Highway<br />
+                Prahladnagar, Ahmedabad - 380015
+              </p>
+              <div className="flex items-center text-sm text-gray-500">
+                <span>Open Daily: 10 AM - 12 PM</span>
+              </div>
             </div>
           </div>
         </div>
