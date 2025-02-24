@@ -7,32 +7,39 @@ const Index = () => {
     <div className="min-h-screen bg-cream-50">
       <Navbar />
       
-      {/* Hero Section - Keep existing code but add floating elements */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1501443762994-82bd5dace89a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-black/20" />
         
-        {/* Floating Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 animate-float">
-            <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
-                 alt="Floating ice cream" 
-                 className="w-24 h-24 rounded-full object-cover shadow-lg" />
+            <div className="relative">
+              <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
+                   alt="ZeroBite ice cream cup" 
+                   className="w-24 h-24 rounded-full object-cover shadow-lg" />
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-cream-100 px-3 py-1 rounded-full text-xs font-semibold shadow-sm">
+                ZeroBite
+              </div>
+            </div>
           </div>
           <div className="absolute bottom-1/4 right-1/4 animate-float-delayed">
-            <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
-                 alt="Floating cone" 
-                 className="w-20 h-20 rounded-full object-cover shadow-lg" />
+            <div className="relative">
+              <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
+                   alt="ZeroBite cone" 
+                   className="w-20 h-20 rounded-full object-cover shadow-lg" />
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-cream-100 px-3 py-1 rounded-full text-xs font-semibold shadow-sm">
+                ZeroBite
+              </div>
+            </div>
           </div>
         </div>
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-          {/* Hero Content */}
           <h1 className="font-playfair text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-6 animate-fade-up">
-            Extraordinary Ice Cream Experiences
+            Welcome to ZeroBite
           </h1>
           <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto mb-8 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-            Handcrafted with passion, served with love. Experience ice cream like never before.
+            Indulge in guilt-free moments of pure bliss with our artisanal ice creams.
           </p>
           <a
             href="#flavors"
@@ -44,31 +51,33 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Awards Section */}
-      <section className="py-12 bg-cream-100">
+      <section className="py-16 bg-cream-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center text-center p-6 rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
-              <Star className="w-12 h-12 text-yellow-400 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Premium Quality</h3>
-              <p className="text-gray-600">Made with the finest ingredients from around the world</p>
-            </div>
-            <div className="flex flex-col items-center text-center p-6 rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
-              <Award className="w-12 h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Award Winning</h3>
-              <p className="text-gray-600">Recognized for exceptional taste and quality</p>
-            </div>
-            <div className="flex flex-col items-center text-center p-6 rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
-              <Clock className="w-12 h-12 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Fresh Daily</h3>
-              <p className="text-gray-600">Made fresh every day in small batches</p>
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="font-playfair text-4xl font-bold text-gray-900 mb-4">
+              Most Loved Flavors
+            </h2>
+            <p className="text-gray-600">Fan favorites that keep our customers coming back for more</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {mostLovedFlavors.map((flavor) => (
+              <div key={flavor.name} className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow">
+                <div className="relative">
+                  <div className="aspect-square rounded-lg overflow-hidden mb-4">
+                    <img src={flavor.image} alt={flavor.name} className="w-full h-full object-cover" />
+                  </div>
+                  <div className="absolute top-2 right-2 bg-red-50 text-red-600 px-2 py-1 rounded-full text-xs font-medium">
+                    ♥ {flavor.loves}
+                  </div>
+                </div>
+                <h3 className="font-semibold text-gray-900">{flavor.name}</h3>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Featured Flavors Section */}
-      <section id="flavors" className="py-20 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-playfair text-4xl font-bold text-gray-900 mb-4">
@@ -111,7 +120,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Our Process Section */}
       <section id="process" className="py-20 bg-cream-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -147,7 +155,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Instagram Feed Section */}
       <section className="py-16 bg-cream-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -169,7 +176,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -231,23 +237,64 @@ const Index = () => {
 
 const flavors = [
   {
-    name: "Vanilla Bean Dream",
+    name: "Classic Vanilla Bean",
     description: "Madagascar vanilla beans infused in our signature cream base.",
     image: "https://images.unsplash.com/photo-1570197788417-0e82375c9371?ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80",
     allergens: ["Milk"],
   },
   {
-    name: "Dark Chocolate Decadence",
+    name: "Belgian Dark Chocolate",
     description: "Rich Belgian chocolate blended to perfection.",
     image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80",
     allergens: ["Milk", "Soy"],
   },
   {
-    name: "Fresh Mint Chip",
+    name: "Garden Fresh Mint Chip",
     description: "Garden-fresh mint leaves with dark chocolate chips.",
     image: "https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80",
     seasonal: true,
     allergens: ["Milk"],
+  },
+  {
+    name: "Strawberry Fields",
+    description: "Fresh strawberries blended with cream and a hint of vanilla.",
+    image: "https://images.unsplash.com/photo-1488900128323-21503983a07e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80",
+    allergens: ["Milk"],
+  },
+  {
+    name: "Salted Caramel Swirl",
+    description: "Handcrafted caramel sauce swirled through vanilla ice cream.",
+    image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80",
+    allergens: ["Milk"],
+  },
+  {
+    name: "Pistachio Dream",
+    description: "Real pistachios blended into our creamy base.",
+    image: "https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80",
+    allergens: ["Milk", "Nuts"],
+  },
+];
+
+const mostLovedFlavors = [
+  {
+    name: "Classic Vanilla Bean",
+    image: "https://images.unsplash.com/photo-1570197788417-0e82375c9371?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+    loves: "2.3k",
+  },
+  {
+    name: "Belgian Dark Chocolate",
+    image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+    loves: "1.9k",
+  },
+  {
+    name: "Strawberry Fields",
+    image: "https://images.unsplash.com/photo-1488900128323-21503983a07e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+    loves: "1.7k",
+  },
+  {
+    name: "Salted Caramel Swirl",
+    image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
+    loves: "1.5k",
   },
 ];
 
