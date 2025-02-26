@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -22,7 +23,10 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex items-center">
+            <div className="w-10 h-10 mr-3 rounded-full bg-gradient-to-br from-cream-300 to-cream-500 flex items-center justify-center shadow-md">
+              <span className="text-white font-bold text-lg">Z</span>
+            </div>
             <a href="/" className="font-playfair text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent hover:from-gray-600 hover:to-gray-900 transition-all tracking-tight">
               ZeroBite
             </a>
