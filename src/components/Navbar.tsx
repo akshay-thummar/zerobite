@@ -24,12 +24,18 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center">
-            <div className="w-10 h-10 mr-3 rounded-full bg-gradient-to-br from-cream-300 to-cream-500 flex items-center justify-center shadow-md">
-              <span className="text-white font-bold text-lg">Z</span>
+            {/* Custom ZeroBite Logo with bitten 0 */}
+            <div className="mr-3 flex items-center justify-center">
+              <div className="relative h-10 flex items-center">
+                <span className="font-playfair text-3xl font-bold text-gray-900">Zer</span>
+                <div className="relative inline-block">
+                  <span className="font-playfair text-3xl font-bold text-cream-500">0</span>
+                  {/* Bite mark in the zero */}
+                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full border-2 border-cream-500"></div>
+                </div>
+                <span className="font-playfair text-3xl font-bold text-gray-900">Bite</span>
+              </div>
             </div>
-            <a href="/" className="font-playfair text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent hover:from-gray-600 hover:to-gray-900 transition-all tracking-tight">
-              ZeroBite
-            </a>
           </div>
           
           {/* Desktop Menu */}
