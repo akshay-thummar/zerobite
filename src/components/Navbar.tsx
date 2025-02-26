@@ -24,22 +24,17 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center">
-            {/* ZeroBite Logo with custom SVG */}
-            <div className="mr-3 relative h-10">
-              <svg width="160" height="40" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-full">
-                <text x="0" y="30" fontFamily="'Playfair Display', serif" fontSize="30" fontWeight="bold" fill="#1F2937">Zer</text>
-                {/* The 0 with bite mark */}
-                <g className="zero-with-bite">
-                  <text x="56" y="30" fontFamily="'Playfair Display', serif" fontSize="30" fontWeight="bold" fill="#FFB478">0</text>
-                  {/* Bite mark circle (represents bite taken from the 0) */}
-                  <circle cx="65" cy="15" r="5" fill="white" stroke="#FFB478" strokeWidth="2"/>
-                  {/* Small bite marks to make it look like teeth marks */}
-                  <path d="M62 15 L60 17" stroke="#FFB478" strokeWidth="1"/>
-                  <path d="M65 12 L65 10" stroke="#FFB478" strokeWidth="1"/>
-                  <path d="M68 15 L70 17" stroke="#FFB478" strokeWidth="1"/>
-                </g>
-                <text x="75" y="30" fontFamily="'Playfair Display', serif" fontSize="30" fontWeight="bold" fill="#1F2937">Bite</text>
-              </svg>
+            {/* Custom ZeroBite Logo with bitten 0 */}
+            <div className="mr-3 flex items-center justify-center">
+              <div className="relative h-10 flex items-center">
+                <span className="font-playfair text-3xl font-bold text-gray-900">Zer</span>
+                <div className="relative inline-block">
+                  <span className="font-playfair text-3xl font-bold text-cream-500">0</span>
+                  {/* Bite mark in the zero */}
+                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full border-2 border-cream-500"></div>
+                </div>
+                <span className="font-playfair text-3xl font-bold text-gray-900">Bite</span>
+              </div>
             </div>
           </div>
           
