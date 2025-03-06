@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, IceCream } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm' : 'bg-transparent'
+        isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,7 +40,10 @@ const Navbar = () => {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <NavLink href="#flavors">Our Flavors</NavLink>
+            <NavLink href="#flavors">
+              <IceCream className="h-4 w-4 mr-1 inline-block" />
+              Our Flavors
+            </NavLink>
             <NavLink href="#process">Our Process</NavLink>
             <NavLink href="#locations">Locations</NavLink>
             <NavLink href="#contact">Contact</NavLink>
@@ -60,8 +63,9 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/80 backdrop-blur-md">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/90 backdrop-blur-md rounded-lg shadow-lg">
               <MobileNavLink href="#flavors" onClick={() => setIsMobileMenuOpen(false)}>
+                <IceCream className="h-4 w-4 mr-1 inline-block" />
                 Our Flavors
               </MobileNavLink>
               <MobileNavLink href="#process" onClick={() => setIsMobileMenuOpen(false)}>
